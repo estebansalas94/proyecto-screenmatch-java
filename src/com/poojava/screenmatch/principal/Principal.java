@@ -1,20 +1,18 @@
+package com.poojava.screenmatch.principal;
+
 import com.poojava.screenmatch.calculos.CalculadoraDeTiempo;
 import com.poojava.screenmatch.calculos.FiltroRecomendaciones;
 import com.poojava.screenmatch.modelos.Episodio;
 import com.poojava.screenmatch.modelos.Pelicula;
 import com.poojava.screenmatch.modelos.Serie;
-
 import java.util.ArrayList;
 
 public class Principal {
 
     public static void main(String[] args) {
-        Pelicula miPelicula = new Pelicula();
-        miPelicula.setNombre("Soul");
-        miPelicula.setFechaDeLanzamiento(2023);
+        Pelicula miPelicula = new Pelicula("Soul", 2023);
         miPelicula.setDuracionEnMinutos(120);
         miPelicula.setIncluidoEnElPlan(true);
-
         miPelicula.muestraFichaTecnica();
         miPelicula.evalua(10);
         miPelicula.evalua(10);
@@ -23,9 +21,7 @@ public class Principal {
 
         System.out.println("************************************************");
 
-        Serie casaDragon = new Serie();
-        casaDragon.setNombre("La casa del dragon");
-        casaDragon.setFechaDeLanzamiento(2022);
+        Serie casaDragon = new Serie("La casa del dragon", 2022);
         casaDragon.setTemporada(1);
         casaDragon.setMinutosPorEpisodio(50);
         casaDragon.setEpisodiosPorTemporada(10);
@@ -52,9 +48,8 @@ public class Principal {
 
         filtroRecomendaciones.filtra(episodio);
 
-        Pelicula peliculaDeBruno = new Pelicula();
-        peliculaDeBruno.setNombre("El señor de los anillos");
-        peliculaDeBruno.setFechaDeLanzamiento(2001);
+        Pelicula peliculaDeBruno = new Pelicula("El señor de los anillos", 2001);
+
         peliculaDeBruno.setDuracionEnMinutos(180);
 
         ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
@@ -63,10 +58,10 @@ public class Principal {
 
         System.out.println("Tamaño de la lista: " + listaDePeliculas.size());
         System.out.println("Primera pelicula: " + listaDePeliculas.get(0).getNombre());
-
         System.out.println("Todas las peliculas: " + listaDePeliculas);
-
         System.out.println("toString de la pelicula: " + listaDePeliculas.get(0).toString());
+
+
 
 
 
