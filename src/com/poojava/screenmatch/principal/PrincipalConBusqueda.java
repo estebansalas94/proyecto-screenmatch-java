@@ -30,7 +30,7 @@ public class PrincipalConBusqueda {
             System.out.println("Escriba el nombre de la pelicula: ");
             var busqueda = teclado.nextLine();
 
-            if (busqueda.equalsIgnoreCase("salir")){
+            if ("salir".equalsIgnoreCase(busqueda)){
                 break;
             }
             String url = "http://www.omdbapi.com/?t=" + busqueda.replace(" ", "+top") + "&apikey=e4e09f79";
